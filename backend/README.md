@@ -13,8 +13,16 @@ Call APIs
 * Hello API => http://localhost:3000/
 * Application Metric => http://localhost:3000/metrics
 
-## Step 2 :: Testing
+## Step 2 :: Testing in NodeJS
+* [Jest](https://jestjs.io/)
+* [SuperTest](https://www.npmjs.com/package/supertest)
 ```
 $npm test
+```
+
+## Step 3 :: API Testing with Postman and Newman
+```
+$cd api-test
+$newman run group01.postman_collection.json
 ```
 
