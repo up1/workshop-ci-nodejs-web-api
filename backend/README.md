@@ -56,6 +56,37 @@ sonar.password=xitgmLwmp
 $sonar-scanner
 ```
 
+## 5. Deploy with [PM2](https://pm2.keymetrics.io/)
+
+Install
+```
+$npm install -g pm2@latest 
+```
+
+Start service
+```
+$pm2 start src/index.js --name api
+$pm2 status
+```
+
+Manage process
+```
+$pm2 restart api
+$pm2 reload api
+$pm2 stop api
+$pm2 delete api
+```
+
+Start with Cluster mode
+```
+$pm2 start app.js -i max --name api
+```
+or
+```
+$pm2 start src/index.js -i 2 --name api
+```
+
+
 
 
 
