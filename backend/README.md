@@ -60,7 +60,7 @@ $sonar-scanner
 
 Install
 ```
-$npm install -g pm2@latest 
+$npm install -g pm2@latest
 ```
 
 Start service
