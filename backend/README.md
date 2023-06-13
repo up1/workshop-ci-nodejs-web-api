@@ -25,7 +25,7 @@ $npm test
 * [Newman](https://www.npmjs.com/package/newman)
 ```
 $cd api-test
-$newman run group01.postman_collection.json
+$newman run group01.postman_collection.json -r cli,junit
 ```
 
 ## Step 4 :: Static Code Analysis with [SonarQube](https://docs.sonarqube.org/latest/)
