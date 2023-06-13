@@ -21,6 +21,8 @@ $npm test
 ```
 
 ## Step 3 :: API Testing with Postman and Newman
+* [Postman](https://www.postman.com/)
+* [Newman](https://www.npmjs.com/package/newman)
 ```
 $cd api-test
 $newman run group01.postman_collection.json
