@@ -1,5 +1,5 @@
 /** A class for rectangle. */
-class Rectangle {
+export class Rectangle {
     /** The width property of a rectangle. */
     width: number | string;
     /** The length property of a rectangle. */
