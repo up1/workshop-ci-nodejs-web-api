@@ -1,4 +1,4 @@
-# Workshop CI/CD :: Hello World
+# Workshop CI/CD :: Hello World ...
 * [Frontend => React](https://github.com/up1/workshop-ci-nodejs-web-api/tree/main/frontend)
 * [Backend  => NodeJS](https://github.com/up1/workshop-ci-nodejs-web-api/tree/main/backend)
 * Database => MySQL
