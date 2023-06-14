@@ -7,7 +7,7 @@ const metricsMiddleware = promBundle({includeMethod: true});
 app.use(metricsMiddleware);
 
 app.get("/", function (req, res) {
-    res.json({ message: 'Hello World with deployment' })
+    res.json({ message: 'Hello World with deployment by jenkins' })
 });
 
 app.get("/hello", function (req, res) {
