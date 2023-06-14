@@ -32,3 +32,4 @@ $docker compose down
 
 ### Reference Websites
 * [Workshop CI/CD with Jenkins](https://github.com/up1/workshop-ci-cd-with-jenkins)
+* [VS Code :: Generate class diagram from TypeScript]([classdiagram-t](https://marketplace.visualstudio.com/items?itemName=AlexShen.classdiagram-ts&ssr=false#overview)s)
