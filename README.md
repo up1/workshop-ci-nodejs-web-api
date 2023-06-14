@@ -3,6 +3,7 @@
 * [Backend  => NodeJS](https://github.com/up1/workshop-ci-nodejs-web-api/tree/main/backend)
 * Database => MySQL
 * [CI/CD with Jenkins](https://github.com/up1/workshop-ci-cd-with-jenkins/tree/main/workshop/install)
+* [Generate Documentation from Code](https://github.com/up1/workshop-ci-nodejs-web-api/tree/main/document)
 
 ## Working with Docker
 
