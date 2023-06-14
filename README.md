@@ -2,6 +2,7 @@
 * [Frontend => React](https://github.com/up1/workshop-ci-nodejs-web-api/tree/main/frontend)
 * [Backend  => NodeJS](https://github.com/up1/workshop-ci-nodejs-web-api/tree/main/backend)
 * Database => MySQL
+* [CI/CD with Jenkins](https://github.com/up1/workshop-ci-cd-with-jenkins/tree/main/workshop/install)
 
 ## Working with Docker
 
