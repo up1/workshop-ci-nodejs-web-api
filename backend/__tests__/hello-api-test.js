@@ -6,6 +6,6 @@ describe("GET /", function () {
     const response = await request(app).get("/");
 
     expect(response.status).toEqual(200);
-    expect(response.body.message).toEqual("Hello World");
+    expect(response.body.message).toEqual("Hello World 2");
   });
 });
