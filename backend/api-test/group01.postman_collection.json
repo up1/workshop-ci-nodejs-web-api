@@ -50,10 +50,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/",
+					"raw": "http://157.230.41.136:3000/",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"157",
+						"230",
+						"41",
+						"136"
 					],
 					"port": "3000",
 					"path": [
