@@ -20,7 +20,7 @@
 							"",
 							"pm.test(\"Check hello message\", function () {",
 							"    var jsonData = pm.response.json();",
-							"    pm.expect(jsonData.message).to.eql('Hello World');",
+							"    pm.expect('Hello World 2').to.eql(jsonData.message);",
 							"});",
 							"",
 							"var schema = {",
