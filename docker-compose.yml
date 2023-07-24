@@ -18,6 +18,9 @@ services:
       - DB_NAME=demo
       - DB_USER=user
       - DB_PASSWORD=password
+    depends_on:
+      mysql:
+        condition: service_healthy
   
   mysql:
     image: mysql:8.0.33
@@ -31,6 +34,12 @@ services:
     volumes:
       - ./db/table.sql:/docker-entrypoint-initdb.d/1.sql
       - ./db/data.sql:/docker-entrypoint-initdb.d/2.sql
+    healthcheck:
+      test: ["CMD", "mysql", "-hlocalhost", "-uuser", "-ppassword", "-e", "USE demo;"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
 
   phpmyadmin:
     image: phpmyadmin
@@ -42,3 +51,6 @@ services:
       - MYSQL_DATABASE=demo
       - MYSQL_USER=user
       - MYSQL_PASSWORD=password
+    depends_on:
+      mysql:
+        condition: service_healthy
