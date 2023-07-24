@@ -14,4 +14,10 @@ app.get("/hello", function (req, res) {
     res.json({ message: 'Hello World...' })
 });
 
+
+const db = require("./db.js");
+app.get("/db", function (req, res) {
+    db.getAllEmployee(req, res)
+});
+
 module.exports = app;
