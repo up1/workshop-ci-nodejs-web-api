@@ -9,8 +9,8 @@
 
 ### Build images
 ```
-$docker compose build frontend
 $docker compose build backend
+$docker compose build frontend
 ```
 
 ### Create containers
@@ -40,6 +40,11 @@ $docker compose logs --follow
 Stop and remove all containers
 ```
 $docker compose down
+```
+
+Start in one-line
+```
+$docker compose up -d
 ```
 
 ### Reference Websites
