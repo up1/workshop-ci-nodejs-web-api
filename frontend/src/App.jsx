@@ -17,10 +17,10 @@ function App() {
   const [users, setUsers] = useState([])
 
   useEffect(() => {
-    axios.get('https://jsonplaceholder.typicode.com/users')
-    // axios.get('/users')
+    // axios.get('https://jsonplaceholder.typicode.com/users')
+    axios.get('/api/db')
       .then(response => {
-        setUsers(response.data)
+        setUsers(response.data.data)
       })
       .catch(error => {
         console.error(error)
