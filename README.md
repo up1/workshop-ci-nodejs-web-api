@@ -7,16 +7,28 @@
 
 ## Working with Docker
 
-Build images
+### Build images
 ```
 $docker compose build frontend
 $docker compose build backend
 ```
 
-Create containers
+### Create containers
+
+Database
+```
+$docker compose up -d mysql
+$docker compose up -d phpmyadmim
+```
+
+Backend with NodeJS
+```
+$docker compose up -d backend
+```
+
+Frontend
 ```
 $docker compose up -d frontend
-$docker compose up -d backend
 $docker compose ps
 ```
 
