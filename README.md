@@ -25,6 +25,7 @@ $docker compose up -d phpmyadmin
 
 Backend with NodeJS
 ```
+$docker compose build backend
 $docker compose up -d backend
 ```
 URL to test
@@ -34,9 +35,16 @@ URL to test
 
 Frontend
 ```
+$docker compose build frontend
 $docker compose up -d frontend
 $docker compose ps
 ```
+
+URL to test
+* http://localhost:8080
+* http://localhost:8080/api
+* http://localhost:8080/api/hello
+* http://localhost:8080/api/db
 
 Logs
 ```
