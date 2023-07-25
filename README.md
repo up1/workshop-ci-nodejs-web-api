@@ -20,7 +20,7 @@ $docker compose build frontend
 Database
 ```
 $docker compose up -d mysql
-$docker compose up -d phpmyadmim
+$docker compose up -d phpmyadmin
 ```
 
 Backend with NodeJS
