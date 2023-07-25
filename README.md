@@ -1,7 +1,9 @@
 # Workshop CI/CD :: Hello World
 * [Frontend => React](https://github.com/up1/workshop-ci-nodejs-web-api/tree/main/frontend)
 * [Backend  => NodeJS](https://github.com/up1/workshop-ci-nodejs-web-api/tree/main/backend)
-* Database => MySQL
+* Database =>
+  * MySQL
+  * PHPMyAdmin
 * [CI/CD with Jenkins](https://github.com/up1/workshop-ci-cd-with-jenkins/tree/main/workshop/install)
 * [Generate Documentation from Code](https://github.com/up1/workshop-ci-nodejs-web-api/tree/main/document)
 
