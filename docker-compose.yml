@@ -1,4 +1,5 @@
 version: "3"
+
 services:
   frontend:
     build:
@@ -63,3 +64,12 @@ services:
     depends_on:
       mysql:
         condition: service_healthy
+
+  postman:
+    image: postman/newman:alpine
+    command:
+      run docker.postman_collection.json -k
+      -r cli,junit
+      --reporter-junit-export="reports/results.xml"
+    volumes:
+      - ./api-test/:/etc/newman
