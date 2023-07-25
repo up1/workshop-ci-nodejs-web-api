@@ -67,6 +67,7 @@ services:
 
   postman:
     image: postman/newman:alpine
+    tty: true
     command:
       run docker.postman_collection.json -k
       -r cli,junit
