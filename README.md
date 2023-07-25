@@ -27,6 +27,10 @@ Backend with NodeJS
 ```
 $docker compose up -d backend
 ```
+URL to test
+* http://localhost:3000
+* http://localhost:3000/hello
+* http://localhost:3000/db
 
 Frontend
 ```
