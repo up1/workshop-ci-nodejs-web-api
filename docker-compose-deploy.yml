@@ -1,0 +1,52 @@
+version: "3"
+
+services:
+  frontend:
+    image: frontend:1.0
+    ports:
+      - 8080:80
+    
+  backend:
+    image: backend:1.0
+    environment:
+      - DB_HOST=mysql
+      - DB_NAME=demo
+      - DB_USER=user
+      - DB_PASSWORD=password
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/hello"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+    
+  
+  mysql:
+    image: mysql:8.0.33
+    # ports:
+    #   - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=demo
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+    volumes:
+      - ./db/table.sql:/docker-entrypoint-initdb.d/1.sql
+      - ./db/data.sql:/docker-entrypoint-initdb.d/2.sql
+    healthcheck:
+      test: ["CMD", "mysql", "-hlocalhost", "-uuser", "-ppassword", "-e", "USE demo;"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+
+  phpmyadmin:
+    image: phpmyadmin
+    ports:
+      - "8090:80"
+    environment:
+      - PMA_HOST=mysql
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=demo
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
