@@ -7,7 +7,7 @@
 * [CI/CD with Jenkins](https://github.com/up1/workshop-ci-cd-with-jenkins/tree/main/workshop/install)
 * [Generate Documentation from Code](https://github.com/up1/workshop-ci-nodejs-web-api/tree/main/document)
 
-## Working with Docker
+## Working with Docker and Docker compose
 
 ### Build images
 ```
@@ -21,12 +21,16 @@ Database
 ```
 $docker compose up -d mysql
 $docker compose up -d phpmyadmin
+
+$docker compose ps
 ```
 
 Backend with NodeJS
 ```
 $docker compose build backend
 $docker compose up -d backend
+
+$docker compose ps
 ```
 URL to test
 * http://localhost:3000
@@ -37,6 +41,7 @@ Frontend
 ```
 $docker compose build frontend
 $docker compose up -d frontend
+
 $docker compose ps
 ```
 
