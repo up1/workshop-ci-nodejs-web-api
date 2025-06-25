@@ -1,4 +1,4 @@
-FROM node:18 as step1
+FROM node:18 AS step1
 WORKDIR /app
 COPY package.json /app/
 RUN npm install
