@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "4986717a-6f30-4fef-9ef2-8ebe0d1dca69",
+		"_postman_id": "ad2e80ee-bfa3-468d-a188-f2e221857869",
 		"name": "docker",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "1453931",
-		"_collection_link": "https://red-firefly-245852.postman.co/workspace/a01~e6fc1d16-002c-4904-bf3b-adf289dff533/collection/1453931-4986717a-6f30-4fef-9ef2-8ebe0d1dca69?action=share&creator=1453931&source=collection_link"
+		"_collection_link": "https://red-firefly-245852.postman.co/workspace/ThailandPost~61950a6c-9eb7-4c21-96ec-a41731bf5a32/collection/1453931-ad2e80ee-bfa3-468d-a188-f2e221857869?action=share&source=collection_link&creator=1453931"
 	},
 	"item": [
 		{
@@ -136,17 +136,72 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "http://backend:3000/db",
-					"protocol": "http",
-					"host": [
-						"backend"
-					],
-					"port": "3000",
-					"path": [
-						"db"
-					]
+				"url": "http://backend:3000/db"
+			},
+			"response": []
+		},
+		{
+			"name": "Hello",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"const response = pm.response.json();",
+							"const schema = {",
+							"    type: \"object\",",
+							"    properties: {",
+							"        message: { type: \"string\" }",
+							"    },",
+							"    required: [\"message\"]",
+							"};",
+							"",
+							"pm.test(\"Response matches JSON schema\", function () {",
+							"    pm.expect(tv4.validate(response, schema)).to.be.true;",
+							"});",
+							"",
+							"pm.test(\"Response message is 'Hello World 2'\", function () {",
+							"    pm.expect(response.message).to.eql(\"Hello World 2\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
 				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://backend:3000/"
+			},
+			"response": []
+		},
+		{
+			"name": "Hello2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://backend:3000/hello"
 			},
 			"response": []
 		}
