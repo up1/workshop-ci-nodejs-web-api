@@ -12,9 +12,9 @@ services:
   backend:
     build:
       context: ./backend
-    image: backend:1.0
-    # ports:
-    #   - 3000:3000
+    image: somkiat/backend:201
+    ports:
+      - 3000:3000
     environment:
       - DB_HOST=mysql
       - DB_NAME=demo
@@ -29,7 +29,6 @@ services:
     depends_on:
       mysql:
         condition: service_healthy
-    mem_limit: 200m
 
   mysql:
     image: mysql:8.0.33
@@ -49,6 +48,11 @@ services:
       timeout: 5s
       retries: 5
       start_period: 5s
+
+  db:
+    build:
+      context: ./db
+    image: somkiat/db:1.0
 
   phpmyadmin:
     image: phpmyadmin

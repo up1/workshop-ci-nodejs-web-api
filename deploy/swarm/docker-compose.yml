@@ -1,0 +1,30 @@
+services:
+  backend:
+    image: somkiat/backend:201
+    ports:
+      - "3000:3000"
+    environment:
+      - DB_HOST=mysql
+      - DB_NAME=demo
+      - DB_USER=user
+      - DB_PASSWORD=password
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/hello"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+  
+  mysql:
+    image: somkiat/db:1.0
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=demo
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+    healthcheck:
+      test: ["CMD", "mysql", "-hlocalhost", "-uuser", "-ppassword", "-e", "USE demo;"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
