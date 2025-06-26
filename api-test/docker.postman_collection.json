@@ -25,7 +25,7 @@
 							"",
 							"pm.test(\"Data size = 3\", function () {",
 							"    var jsonData = pm.response.json();",
-							"    pm.expect(jsonData.data.length).to.eql(4);",
+							"    pm.expect(jsonData.data.length).to.eql(3);",
 							"});",
 							"",
 							"",
