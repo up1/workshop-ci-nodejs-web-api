@@ -74,3 +74,14 @@ services:
       --reporter-junit-export="reports/results.xml"
     volumes:
       - ./api-test/:/etc/newman
+  
+  sonarscanner_backend:
+    image: sonarsource/sonar-scanner-cli
+    environment:
+      - SONAR_HOST_URL=http://159.223.91.142:9000
+      - SONAR_TOKEN=sqa_8e0a474caae2ed098f539250b6cae8e653dc30fc
+      - SONAR_LOGIN=admin
+      - SONAR_PASSWORD=xitgmLwmp1@q
+      - SONAR_PROJECT_BASE_DIR=/app
+    volumes:
+      - ./backend:/app
