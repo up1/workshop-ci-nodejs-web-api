@@ -13,8 +13,8 @@ services:
     build:
       context: ./backend
     image: backend:1.0
-    ports:
-      - 3000:3000
+    # ports:
+    #   - 3000:3000
     environment:
       - DB_HOST=mysql
       - DB_NAME=demo
@@ -29,7 +29,8 @@ services:
     depends_on:
       mysql:
         condition: service_healthy
-  
+    mem_limit: 200m
+
   mysql:
     image: mysql:8.0.33
     # ports:
