@@ -5,12 +5,12 @@ metadata:
     kompose.cmd: kompose convert -f docker-compose.yml
     kompose.version: 1.35.0 (HEAD)
   labels:
-    io.kompose.service: backend
-  name: backend
+    io.kompose.service: mysql
+  name: mysql
 spec:
   ports:
-    - name: "3000"
-      port: 3000
-      targetPort: 3000
+    - name: "3306"
+      port: 3306
+      targetPort: 3306
   selector:
-    io.kompose.service: backendv2
+    io.kompose.service: mysql

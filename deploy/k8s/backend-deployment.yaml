@@ -11,14 +11,14 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: backend
+      io.kompose.service: backendv2
   template:
     metadata:
       annotations:
         kompose.cmd: kompose convert -f docker-compose.yml
         kompose.version: 1.35.0 (HEAD)
       labels:
-        io.kompose.service: backend
+        io.kompose.service: backendv2
     spec:
       containers:
         - env:
